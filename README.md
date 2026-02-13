@@ -47,6 +47,26 @@ pip install -r requirements.txt
 python game.py
 ```
 
+## Build standalone .exe
+
+To package the demo as a single Windows executable (no Python install needed on the target machine):
+
+1. Install PyInstaller (if not already installed):
+
+```powershell
+pip install pyinstaller
+```
+
+2. Run the build script:
+
+```powershell
+.\build.bat
+```
+
+3. The executable will be at `dist\AutonomousDrivingDemo.exe`.
+
+> **Note:** The resulting `.exe` will be large (~300-500 MB) because it bundles PyTorch. The first launch may take a few seconds to unpack.
+
 ## Notes for presenters
 
 - The demo is intentionally visual and fast to help students see RL behavior changes in real time.
