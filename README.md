@@ -67,6 +67,33 @@ pip install pyinstaller
 
 > **Note:** The resulting `.exe` will be large (~300-500 MB) because it bundles PyTorch. The first launch may take a few seconds to unpack.
 
+## Build standalone executable (Ubuntu/Linux)
+
+To package the demo on Ubuntu/Linux:
+
+1. (Recommended) create and activate a virtual environment:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+2. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Run the Linux build script:
+
+```bash
+bash build_linux.sh
+```
+
+4. The executable will be at `dist/AutonomousDrivingDemo`.
+
+> **Note:** Build on Linux for Linux output. A Windows-built `.exe` will not run on Ubuntu.
+
 ## Notes for presenters
 
 - The demo is intentionally visual and fast to help students see RL behavior changes in real time.
